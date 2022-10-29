@@ -1,4 +1,4 @@
-package com.nm.toolrental;
+package com.nm1022.tool.rental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
