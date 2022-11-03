@@ -1,5 +1,6 @@
 package com.nm1022.tool.rental.handler.rental.term;
 
+import com.nm1022.tool.rental.persistence.model.ChargeIndicators;
 import com.nm1022.tool.rental.util.CalendarUtil;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,9 @@ public class RentalTermProcessor {
         this.rentalTermHandler = weekdayRentalTerm;
     }
 
-    public void process(LocalDate checkoutDate, int numOfRentalDays) {
+    public int process(LocalDate checkoutDate, int numOfRentalDays, ChargeIndicators chargeIndicators) {
         List<LocalDate> rentalDates = CalendarUtil.getRentalDates(checkoutDate, numOfRentalDays);
-        rentalTermHandler.handle(rentalDates);
+        rentalTermHandler.handle(rentalDates, chargeIndicators);
+        return rentalDates.size();
     }
 }

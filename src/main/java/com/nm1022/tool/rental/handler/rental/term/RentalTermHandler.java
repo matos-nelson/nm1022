@@ -1,5 +1,6 @@
 package com.nm1022.tool.rental.handler.rental.term;
 
+import com.nm1022.tool.rental.persistence.model.ChargeIndicators;
 import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDate;
@@ -12,14 +13,14 @@ abstract class RentalTermHandler {
         this.next = next;
     }
 
-    public void handle(List<LocalDate> rentalDates) {
+    public void handle(List<LocalDate> rentalDates, ChargeIndicators chargeIndicators) {
 
-        if(CollectionUtils.isEmpty(rentalDates) || doHandle(rentalDates))
+        if(CollectionUtils.isEmpty(rentalDates) || doHandle(rentalDates, chargeIndicators))
             return;
 
         if(next != null)
-            next.handle(rentalDates);
+            next.handle(rentalDates, chargeIndicators);
     }
 
-    public abstract boolean doHandle(List<LocalDate> rentalDates);
+    public abstract boolean doHandle(List<LocalDate> rentalDates, ChargeIndicators chargeIndicators);
 }
