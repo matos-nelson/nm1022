@@ -7,6 +7,8 @@ import com.nm1022.tool.rental.persistence.model.RentalCharge;
 import com.nm1022.tool.rental.persistence.model.Tool;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 public class ToolRepository {
     private Tool[] toolsData;
@@ -14,16 +16,16 @@ public class ToolRepository {
     public ToolRepository() {
         toolsData = new Tool[] {
                 new Tool("CHNS", ToolType.Chainsaw, Brand.Stihl,
-                        new RentalCharge(1.49f,
+                        new RentalCharge(BigDecimal.valueOf(1.49),
                                 new ChargeIndicators(true, false, true))),
                 new Tool("LADW", ToolType.Ladder, Brand.Werner,
-                        new RentalCharge(1.99f,
+                        new RentalCharge(BigDecimal.valueOf(1.99),
                                 new ChargeIndicators(true, true, false))),
                 new Tool("JAKD", ToolType.Jackhammer, Brand.DeWalt,
-                        new RentalCharge(2.99f,
+                        new RentalCharge(BigDecimal.valueOf(2.99),
                                 new ChargeIndicators(true, false, false))),
                 new Tool("JAKR", ToolType.Jackhammer, Brand.Ridgid,
-                        new RentalCharge(2.99f,
+                        new RentalCharge(BigDecimal.valueOf(2.99),
                                 new ChargeIndicators(true, false, false))),
         };
     }
