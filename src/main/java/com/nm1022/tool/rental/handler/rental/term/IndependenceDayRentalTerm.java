@@ -28,12 +28,12 @@ class IndependenceDayRentalTerm extends RentalTermHandler {
         years.forEach(year -> {
             LocalDate independenceDay =  LocalDate.of(year, Month.JULY, 4);
             if (independenceDay.getDayOfWeek() == DayOfWeek.SATURDAY) {
-                independenceDay.minusDays(1);
+                rentalDates.removeIf(rd -> rd.equals(independenceDay.minusDays(1)));
             } else if (independenceDay.getDayOfWeek() == DayOfWeek.SUNDAY) {
-                independenceDay.plusDays(1);
+                rentalDates.removeIf(rd -> rd.equals(independenceDay.plusDays(1)));
+            } else {
+                rentalDates.removeIf(rd -> rd.equals(independenceDay));
             }
-
-            rentalDates.removeIf(rd -> rd.equals(independenceDay));
         });
 
         return false;
