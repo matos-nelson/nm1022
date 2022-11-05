@@ -1,11 +1,14 @@
 package com.nm1022.tool.rental.persistence.model;
 
 import com.nm1022.tool.rental.util.CalendarUtil;
+import com.nm1022.tool.rental.util.DateFormatterUtil;
+import com.nm1022.tool.rental.util.DecimalFormatterUtil;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,6 +25,23 @@ public class RentalAgreement {
     private byte discountPercent;
     private BigDecimal discountAmount;
     private BigDecimal finalCharge;
+
+
+    @Override
+    public String toString() {
+        return "Tool code: " + this.tool.getCode() + "\n" +
+               "Tool type: " + this.tool.getType().toString() + "\n" +
+               "Tool brand: " + this.tool.getBrand().toString() + "\n" +
+               "Rental days: " + this.rentalDays + "\n" +
+               "Check out date: " + DateFormatterUtil.USA_DATE_FORMATTER.format(this.getCheckoutDate()) + "\n" +
+               "Due date: " + DateFormatterUtil.USA_DATE_FORMATTER.format(this.getDueDate()) + "\n" +
+               "Daily rental charge: " + DecimalFormatterUtil.US_CURRENCY_FORMATTER.format(this.dailyRentalCharge) + "\n" +
+               "Charge days: " + this.totalChargeDays + "\n" +
+               "Pre-discount charge: " + DecimalFormatterUtil.US_CURRENCY_FORMATTER.format(this.preDiscountCharge) + "\n" +
+               "Discount percent: " + this.discountPercent + "%\n" +
+               "Discount amount: " + DecimalFormatterUtil.US_CURRENCY_FORMATTER.format(this.discountAmount) + "\n" +
+               "Final charge: " + DecimalFormatterUtil.US_CURRENCY_FORMATTER.format(this.finalCharge) + "\n";
+    }
 
     public static class RentalAgreementBuilder {
         private Tool tool;
