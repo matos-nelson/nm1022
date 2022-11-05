@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @SpringBootApplication
 public class ToolRentalApplication implements CommandLineRunner {
@@ -28,9 +27,7 @@ public class ToolRentalApplication implements CommandLineRunner {
     public void run(String... args) {
         try {
             executeRequest(args);
-        } catch (Exception e) {
-
-        }
+        } catch (Exception e) { }
     }
 
     private void validateArgs(String... args) throws Exception {
@@ -48,7 +45,7 @@ public class ToolRentalApplication implements CommandLineRunner {
 
             LocalDate checkoutDate = LocalDate.parse(args[3]);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
             throw e;
         }
     }
