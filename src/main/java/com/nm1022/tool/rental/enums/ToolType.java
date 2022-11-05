@@ -7,7 +7,7 @@ public enum ToolType {
 
     public final String value;
 
-    private ToolType(String value) {
+    ToolType(String value) {
         this.value = value;
     }
 }

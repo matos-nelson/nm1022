@@ -8,7 +8,7 @@ public enum Brand {
 
     public final String value;
 
-    private Brand(String value) {
+    Brand(String value) {
         this.value = value;
     }
 }
