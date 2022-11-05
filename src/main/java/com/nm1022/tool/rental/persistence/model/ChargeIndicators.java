@@ -1,7 +1,6 @@
 package com.nm1022.tool.rental.persistence.model;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public class ChargeIndicators {

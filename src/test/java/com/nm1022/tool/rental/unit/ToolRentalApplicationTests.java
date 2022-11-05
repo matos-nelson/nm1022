@@ -17,7 +17,7 @@ import java.time.Month;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@ContextConfiguration(classes = {ToolRentalApplication.class})
+@ContextConfiguration(classes = { ToolRentalApplication.class })
 @RunWith(SpringRunner.class)
 public class ToolRentalApplicationTests {
 
@@ -155,6 +155,7 @@ public class ToolRentalApplicationTests {
         assertEquals(BigDecimal.valueOf(0).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(14.95), result.getFinalCharge());
     }
+
     @Test
     public void Test6() throws Exception {
         // Arrange

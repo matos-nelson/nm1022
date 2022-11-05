@@ -5,7 +5,6 @@ import com.nm1022.tool.rental.persistence.model.ChargeIndicators;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
 class WeekendRentalTerm extends RentalTermHandler {
     public WeekendRentalTerm(RentalTermHandler next) {
