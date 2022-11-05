@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.nm1022</groupId>
 	<artifactId>tool.rental</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Tool Rental</name>
 	<description>Tool Rental Application</description>
 	<properties>
