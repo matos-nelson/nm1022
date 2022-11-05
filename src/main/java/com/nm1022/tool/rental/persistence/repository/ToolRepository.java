@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 @Service
 public class ToolRepository {
-    private Tool[] toolsData;
+    private final Tool[] toolsData;
 
     public ToolRepository() {
         toolsData = new Tool[] {
@@ -32,9 +32,9 @@ public class ToolRepository {
 
 
     public Tool findByCode(String toolCode) {
-        for(int i = 0; i < toolsData.length; i++) {
-            if(toolsData[i].getCode().equals(toolCode)) {
-                return toolsData[i];
+        for(Tool tool : toolsData) {
+            if(tool.getCode().equals(toolCode)) {
+                return tool;
             }
         }
 

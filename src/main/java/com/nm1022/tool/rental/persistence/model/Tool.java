@@ -11,7 +11,7 @@ public class Tool {
     private Brand brand;
     private RentalCharge rentalCharge;
 
-    private Tool() { };
+    private Tool() { }
 
     public Tool (String code, ToolType type, Brand brand, RentalCharge rentalCharge) {
         this.code = code;

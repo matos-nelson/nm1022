@@ -9,14 +9,13 @@ import java.util.List;
 
 @Service
 public class RentalTermProcessor {
-    private RentalTermHandler rentalTermHandler;
+    private final RentalTermHandler rentalTermHandler;
 
     public RentalTermProcessor() {
         LaborDayRentalTerm laborDayRentalTerm = new LaborDayRentalTerm(null);
         IndependenceDayRentalTerm independenceDayRentalTerm = new IndependenceDayRentalTerm(laborDayRentalTerm);
         WeekendRentalTerm weekendRentalTerm = new WeekendRentalTerm(independenceDayRentalTerm);
-        WeekdayRentalTerm weekdayRentalTerm = new WeekdayRentalTerm(weekendRentalTerm);
-        this.rentalTermHandler = weekdayRentalTerm;
+        this.rentalTermHandler = new WeekdayRentalTerm(weekendRentalTerm);
     }
 
     public int process(LocalDate checkoutDate, int numOfRentalDays, ChargeIndicators chargeIndicators) {

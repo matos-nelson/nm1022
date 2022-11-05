@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 abstract class RentalTermHandler {
-    private RentalTermHandler next;
+    private final RentalTermHandler next;
 
     public RentalTermHandler(RentalTermHandler next) {
         this.next = next;

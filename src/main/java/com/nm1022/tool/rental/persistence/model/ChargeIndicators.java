@@ -8,7 +8,7 @@ public class ChargeIndicators {
     private boolean weekendCharge;
     private boolean holidayCharge;
 
-    private ChargeIndicators() { };
+    private ChargeIndicators() { }
 
     public ChargeIndicators(boolean weekdayCharge, boolean weekendCharge, boolean holidayCharge) {
         this.weekdayCharge = weekdayCharge;

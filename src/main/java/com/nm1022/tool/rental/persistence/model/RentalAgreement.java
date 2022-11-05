@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -44,11 +43,11 @@ public class RentalAgreement {
     }
 
     public static class RentalAgreementBuilder {
-        private Tool tool;
-        private int rentalDays;
-        private LocalDate checkoutDate;
-        private int chargeDays;
-        private byte discountPercent;
+        private final Tool tool;
+        private final int rentalDays;
+        private final LocalDate checkoutDate;
+        private final int chargeDays;
+        private final byte discountPercent;
 
         public RentalAgreementBuilder(Tool tool, int rentalDays, LocalDate checkoutDate, int chargeDays, byte discountPercent) {
             this.tool = tool;

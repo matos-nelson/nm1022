@@ -10,7 +10,7 @@ public class RentalCharge {
     private BigDecimal dailyCharge;
     private ChargeIndicators chargeIndicators;
 
-    private RentalCharge() { };
+    private RentalCharge() { }
 
     public RentalCharge(BigDecimal dailyCharge, ChargeIndicators chargeIndicators) {
         this.dailyCharge = dailyCharge;
