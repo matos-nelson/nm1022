@@ -82,6 +82,20 @@ public class ToolRentalApplicationTests {
         assertEquals(10, result.getDiscountPercent());
         assertEquals(BigDecimal.valueOf(0.4).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(3.58), result.getFinalCharge());
+        assertNotNull(result.toString());
+        assertEquals(
+                "Tool code: LADW\n" +
+                "Tool type: Ladder\n" +
+                "Tool brand: Werner\n"  +
+                "Rental days: 3\n" +
+                "Check out date: 07/02/2020\n" +
+                "Due date: 07/05/2020\n" +
+                "Daily rental charge: $1.99\n" +
+                "Charge days: 2\n" +
+                "Pre-discount charge: $3.98\n" +
+                "Discount percent: 10%\n" +
+                "Discount amount: $0.40\n" +
+                "Final charge: $3.58\n", result.toString());
     }
 
     @Test
@@ -106,6 +120,19 @@ public class ToolRentalApplicationTests {
         assertEquals(25, result.getDiscountPercent());
         assertEquals(BigDecimal.valueOf(1.12).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(3.35), result.getFinalCharge());
+        assertNotNull(result.toString());
+        assertEquals("Tool code: CHNS\n" +
+                "Tool type: Chainsaw\n" +
+                "Tool brand: Stihl\n"  +
+                "Rental days: 5\n" +
+                "Check out date: 07/02/2015\n" +
+                "Due date: 07/07/2015\n" +
+                "Daily rental charge: $1.49\n" +
+                "Charge days: 3\n" +
+                "Pre-discount charge: $4.47\n" +
+                "Discount percent: 25%\n" +
+                "Discount amount: $1.12\n" +
+                "Final charge: $3.35\n", result.toString());
     }
 
     @Test
@@ -130,6 +157,19 @@ public class ToolRentalApplicationTests {
         assertEquals(0, result.getDiscountPercent());
         assertEquals(BigDecimal.valueOf(0).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(8.97), result.getFinalCharge());
+        assertNotNull(result.toString());
+        assertEquals("Tool code: JAKD\n" +
+                "Tool type: Jackhammer\n" +
+                "Tool brand: DeWalt\n"  +
+                "Rental days: 6\n" +
+                "Check out date: 09/03/2015\n" +
+                "Due date: 09/09/2015\n" +
+                "Daily rental charge: $2.99\n" +
+                "Charge days: 3\n" +
+                "Pre-discount charge: $8.97\n" +
+                "Discount percent: 0%\n" +
+                "Discount amount: $0.00\n" +
+                "Final charge: $8.97\n", result.toString());
     }
 
     @Test
@@ -154,6 +194,19 @@ public class ToolRentalApplicationTests {
         assertEquals(0, result.getDiscountPercent());
         assertEquals(BigDecimal.valueOf(0).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(14.95), result.getFinalCharge());
+        assertNotNull(result.toString());
+        assertEquals("Tool code: JAKR\n" +
+                "Tool type: Jackhammer\n" +
+                "Tool brand: Ridgid\n"  +
+                "Rental days: 9\n" +
+                "Check out date: 07/02/2015\n" +
+                "Due date: 07/11/2015\n" +
+                "Daily rental charge: $2.99\n" +
+                "Charge days: 5\n" +
+                "Pre-discount charge: $14.95\n" +
+                "Discount percent: 0%\n" +
+                "Discount amount: $0.00\n" +
+                "Final charge: $14.95\n", result.toString());
     }
 
     @Test
@@ -178,6 +231,19 @@ public class ToolRentalApplicationTests {
         assertEquals(50, result.getDiscountPercent());
         assertEquals(BigDecimal.valueOf(1.50).setScale(2), result.getDiscountAmount());
         assertEquals(BigDecimal.valueOf(1.49), result.getFinalCharge());
+        assertNotNull(result.toString());
+        assertEquals("Tool code: JAKR\n" +
+                "Tool type: Jackhammer\n" +
+                "Tool brand: Ridgid\n"  +
+                "Rental days: 4\n" +
+                "Check out date: 07/02/2020\n" +
+                "Due date: 07/06/2020\n" +
+                "Daily rental charge: $2.99\n" +
+                "Charge days: 1\n" +
+                "Pre-discount charge: $2.99\n" +
+                "Discount percent: 50%\n" +
+                "Discount amount: $1.50\n" +
+                "Final charge: $1.49\n", result.toString());
     }
 
 }

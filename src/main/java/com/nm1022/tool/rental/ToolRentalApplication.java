@@ -33,7 +33,7 @@ public class ToolRentalApplication implements CommandLineRunner {
 
     private void validateArgs(String... args) throws Exception {
         try {
-            String toolCode = args[0];
+
             int rentalDayCount = Integer.parseInt(args[1]);
             if(rentalDayCount < 1 ) {
                 throw new Exception("Rental Days Requested Needs To Be At Least 1 or Greater.");
@@ -44,7 +44,6 @@ public class ToolRentalApplication implements CommandLineRunner {
                 throw new Exception("Discount Percent Needs To Be In Range of 0-100.");
             }
 
-            LocalDate checkoutDate = LocalDate.parse(args[3], DateFormatterUtil.USA_DATE_FORMATTER);
         } catch (Exception e) {
             System.out.println(e);
             throw e;
