@@ -27,7 +27,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void executeRequest_WhenGivenRentalDayCountIsInvalid_ShouldThrowException() {
         // Arrange
-        String args[] = {"CHNS", "0", "0", "2022-10-25"};
+        String args[] = {"CHNS", "0", "0", "10/25/2022"};
         Exception result = null;
 
         // Act
@@ -45,7 +45,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void executeRequest_WhenGivenDiscountIsOutOfRange_ShouldThrowException_Test1() {
         // Arrange
-        String args[] = {"JAKR", "5", "101", "2015-09-03"};
+        String args[] = {"JAKR", "5", "101", "09/03/2015"};
         Exception result = null;
 
         // Act
@@ -63,7 +63,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void Test2() throws Exception {
         // Arrange
-        String args[] = {"LADW", "3", "10", "2020-07-02"};
+        String args[] = {"LADW", "3", "10", "07/02/2020"};
 
         // Act
         RentalAgreement result = toolRentalApplication.executeRequest(args);
@@ -87,7 +87,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void Test3() throws Exception {
         // Arrange
-        String args[] = {"CHNS", "5", "25", "2015-07-02"};
+        String args[] = {"CHNS", "5", "25", "07/02/2015"};
 
         // Act
         RentalAgreement result = toolRentalApplication.executeRequest(args);
@@ -111,7 +111,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void Test4() throws Exception {
         // Arrange
-        String args[] = {"JAKD", "6", "0", "2015-09-03"};
+        String args[] = {"JAKD", "6", "0", "09/03/2015"};
 
         // Act
         RentalAgreement result = toolRentalApplication.executeRequest(args);
@@ -135,7 +135,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void Test5() throws Exception {
         // Arrange
-        String args[] = {"JAKR", "9", "0", "2015-07-02"};
+        String args[] = {"JAKR", "9", "0", "07/02/2015"};
 
         // Act
         RentalAgreement result = toolRentalApplication.executeRequest(args);
@@ -159,7 +159,7 @@ public class ToolRentalApplicationTests {
     @Test
     public void Test6() throws Exception {
         // Arrange
-        String args[] = {"JAKR", "4", "50", "2020-07-02"};
+        String args[] = {"JAKR", "4", "50", "07/02/2020"};
 
         // Act
         RentalAgreement result = toolRentalApplication.executeRequest(args);
